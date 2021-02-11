@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pdfbox-2.0.211">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../DeShaunBMidterm/lib/pdfbox-2.0.211.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #f5faff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controller">
+   <children>
+      <BorderPane prefHeight="740.0" prefWidth="1167.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="101.0" prefWidth="1167.0" style="-fx-background-color: #FFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="2.0" layoutY="1.0" prefHeight="100.0" prefWidth="1919.0">
+                     <children>
+                        <ImageView fx:id="logo" fitHeight="94.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="50.0" top="5.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../../../../../Downloads/Super%20Script%20circle.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="100.0" prefWidth="249.0" text="Super Script" textFill="#0069d4">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField prefHeight="30.0" prefWidth="311.0" promptText="Find Script" style="-fx-background-color: #fff; -fx-border-color: #ccc; -fx-border-radius: 40;">
+                           <HBox.margin>
+                              <Insets left="200.0" top="37.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="116.0" style="-fx-background-color: #0069d4; -fx-background-radius: 40;" text="Search" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="20.0" right="500.0" top="37.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="accSettings" layoutX="741.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="30.0" prefWidth="45.0" style="-fx-background-radius: 40; -fx-background-color: transparent;" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="200.0" top="35.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fx:id="settingsImg" fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: .6;">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/settings--v1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="cornerMax" layoutX="1026.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="30.0" prefWidth="45.0" style="-fx-background-radius: 40; -fx-background-color: transparent;" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="minimizeImg" fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: .6;">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/minimize-window.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="35.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="cornerX" layoutX="1071.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="30.0" prefWidth="45.0" style="-fx-background-radius: 40; -fx-background-color: transparent;" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: .6;" fx:id="xImg">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/4-46510_cross-mark-x-delete-social-media-icon-facebook.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="35.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="979.0" prefWidth="465.0" spacing="10.0" style="-fx-background-color: #0069d4; -fx-background-radius: 0 90 0 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="52.0" prefWidth="465.0" />
+                  <Button fx:id="newTab" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="65.0" prefWidth="316.0" style="-fx-background-color: #fff; -fx-text-fill: #0069d4; -fx-background-radius: 20; -fx-cursor: pointer;" styleClass=".newScriptBtn" stylesheets="@../css/style.css" text="New Script" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="viewTab" alignment="TOP_CENTER" layoutX="58.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="54.0" prefWidth="284.0" style="-fx-background-color: #0069d4; -fx-cursor: pointer;" stylesheets="@../css/style.css" text="Dashboard" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="importBtn1" alignment="TOP_CENTER" layoutX="58.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="75.0" prefWidth="268.0" style="-fx-background-color: #0069d4; -fx-cursor: pointer;" text="Open Script" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Dashboard" textFill="#0069d4">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="60.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="60.0" prefHeight="32.0" prefWidth="185.0" text="LATEST SCRIPTS" textFill="#575757">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="40.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Pane prefHeight="306.0" prefWidth="1607.0" style="-fx-background-color: #FFF; -fx-border-color: #ccc;" />
+                  <Label prefHeight="25.0" prefWidth="137.0" text="ALL SCRIPTS" textFill="#575757">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="360.0" prefWidth="1435.0" style="-fx-border-color: #ccc;">
+                     <content>
+                        <TableView fx:id="table" prefHeight="378.0" prefWidth="1440.0" style="-fx-background-color: #f5faff;" stylesheets="@../css/style.css">
+                           <columns>
+                              <TableColumn fx:id="scriptNameColumn" minWidth="-1.0" prefWidth="222.0" text="Script Name" />
+                              <TableColumn fx:id="scriptDateColumn" minWidth="0.0" prefWidth="150.0" text="Date Created" />
+                              <TableColumn fx:id="scriptEditBtnColumn" prefWidth="100.0" text="Edit" />
+                              <TableColumn fx:id="scriptExportBtnColumn" minWidth="0.0" prefWidth="100.0" text="Export" />
+                              <TableColumn fx:id="deleteScriptBtnColumn" minWidth="0.0" prefWidth="100.0" text="Delete" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<html dir="ltr">
+ <head> 
+  <style>
+.scene{text-transform:uppercase; text-align:left ;}
+.action{text-align:left ;}
+.character{text-transform:uppercase ; text-align:center ;}
+.dialogue{text-align:center ;}
+.parenthesis{text-align:center ;}
+</style> 
+ </head> 
+ <body contenteditable="true"> 
+  <style>
+.scene{text-transform:uppercase; text-align:left ;}
+.action{text-align:left ;}
+.character{text-transform:uppercase ; text-align:center ;}
+.dialogue{text-align:center ;}
+.parenthesis{text-align:center ;}
+</style> EXT. CITY - NIGHT 
+  <p class="action">Something is happening.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 1</p> 
+  <p style="text-align: center;" class="dialogue">Character 1 speaks.</p> 
+  <p style="text-align: left;" class="scene"><span style="text-align: start;">INT. HOUSE - DAY</span></p> 
+  <p class="action">Something is happening.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 speaks.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p style="text-align: center;" class="dialogue">Character 3 responds to character 2.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 and character 3 are now having a conversation.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p style="text-align: center;" class="dialogue">Character 3 enjoys this conversation.</p> 
+  <p style="text-align: left;" class="scene">EXT. SIDEWALK - NIGHT</p> 
+  <p style="text-align: left;" class="character">Character 1 performs an action.</p> 
+  <p style="text-align: left;" class="dialogue">Character 1 performs another action.</p> 
+  <p style="text-align: left;" class="character">Character 2 sees character one.</p> 
+  <p style="text-align: left;" class="dialogue">Character 2 performs an action.</p> 
+ </body>
+</html>
+<html dir="ltr">
+ <head> 
+  <style>
+.scene{text-transform:uppercase; text-align:left ;}
+.action{text-align:left ;}
+.character{text-transform:uppercase ; text-align:center ;}
+.dialogue{text-align:center ;}
+.parenthesis{text-align:center ;}
+</style> 
+ </head> 
+ <body contenteditable="true"> 
+  <style>
+.scene{text-transform:uppercase; text-align:left ;}
+.action{text-align:left ;}
+.character{text-transform:uppercase ; text-align:center ;}
+.dialogue{text-align:center ;}
+.parenthesis{text-align:center ;}
+</style> EXT. CITY - NIGHT 
+  <p class="action">Something is happening.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 1</p> 
+  <p style="text-align: center;" class="dialogue">Character 1 speaks.</p> 
+  <p style="text-align: left;" class="scene"><span style="text-align: start;">INT. HOUSE - DAY</span></p> 
+  <p class="action">Something is happening.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 speaks.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p style="text-align: center;" class="dialogue">Character 3 responds to character 2.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 and character 3 are now having a conversation.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p class="dialogue" style="text-align: center;">Character 3 enjoys this conversation.</p> 
+ </body>
+</html>
+<html dir="ltr">
+ <head> 
+  <style>
+.scene{text-transform:uppercase; text-align:left ;}
+.action{text-align:left ;}
+.character{text-transform:uppercase ; text-align:center ;}
+.dialogue{text-align:center ;}
+.parenthesis{text-align:center ;}
+</style> 
+ </head> 
+ <body contenteditable="true"> 
+  <style>
+.scene{text-transform:uppercase; text-align:left ;}
+.action{text-align:left ;}
+.character{text-transform:uppercase ; text-align:center ;}
+.dialogue{text-align:center ;}
+.parenthesis{text-align:center ;}
+</style> EXT. CITY - NIGHT 
+  <p class="action">Something is happening.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 1</p> 
+  <p style="text-align: center;" class="dialogue">Character 1 speaks.</p> 
+  <p style="text-align: left;" class="scene"><span style="text-align: start;">INT. HOUSE - DAY</span></p> 
+  <p class="action">Something is happening.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 speaks.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p style="text-align: center;" class="dialogue">Character 3 responds to character 2.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 and character 3 are now having a conversation.</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p class="dialogue" style="text-align: center;">Character 3 enjoys this conversation.</p> 
+ </body>
+</html>

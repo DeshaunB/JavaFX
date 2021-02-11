@@ -1,0 +1,77 @@
+<html dir="ltr">
+ <head> 
+  <style>body{font-family:courier !important;}.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <meta name="title" content="The Test Project">
+  <meta name="story" content="Image Objects\img0.png">
+  <meta name="story" content="Image Objects\img1.png">
+  <meta name="story" content="Image Objects\img2.png">
+  <meta name="story" content="Image Objects\img3.png">
+  <meta name="story" content="Image Objects\img4.png">
+  <meta name="story" content="Image Objects\img5.png">
+  <meta name="story" content="Image Objects\img6.png">
+  <meta name="story" content="Image Objects\img7.png">
+  <meta name="story" content="Image Objects\img8.png">
+  <meta name="story" content="Image Objects\img9.png">
+  <meta name="story" content="Image Objects\img10.png">
+  <meta name="story" content="Image Objects\img11.png">
+  <meta name="story" content="Image Objects\img12.png">
+  <meta name="story" content="Image Objects\img13.png">
+  <meta name="story" content="Image Objects\img14.png">
+  <meta name="story" content="Image Objects\img15.png">
+  <meta name="story" content="Image Objects\img16.png">
+  <meta name="story" content="Image Objects\img17.png">
+  <meta name="story" content="Image Objects\img18.png">
+  <meta name="story" content="Image Objects\img19.png">
+  <meta name="story" content="Image Objects\img20.png">
+  <meta name="story" content="Image Objects\img21.png">
+  <meta name="story" content="Image Objects\img22.png">
+  <meta name="story" content="Image Objects\img23.png">
+  <meta name="story" content="Image Objects\img24.png">
+ </head> 
+ <body contenteditable="true"> 
+  <style>body{font-family:courier !important;}.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <style>.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <style>.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <style>.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <p class="scene">EXT. HOUSE - NIGHT</p> 
+  <p class="action">Something is happening</p> 
+  <p style="text-align: center;" class="character">CHARACTER 1</p> 
+  <p style="text-align: center;" class="dialogue">Character 1 says things</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 says things</p> 
+  <p style="text-align: left;" class="scene">INT. HOUSE - NIGHT</p> 
+  <p style="text-align: left;" class="action">Something else is happening!</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p style="text-align: center;" class="dialogue">Character 3 says things</p> 
+  <p style="text-align: center;" class="character">CHARACTER 4</p> 
+  <p style="text-align: center;" class="dialogue">Character 4 says things</p> 
+  <style>.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <style>.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <style>.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <style>.scene{text-transform:uppercase; text-align:left ;}.action{text-align:left ;}.character{text-transform:uppercase ; text-align:center ;}.dialogue{text-align:center ;}.parenthesis{text-align:center ;}</style> 
+  <p class="scene">EXT. HOUSE - DAY</p> 
+  <p class="action">Something is happening</p> 
+  <p style="text-align: center;" class="character">CHARACTER 1</p> 
+  <p style="text-align: center;" class="dialogue">Character 1 says things</p> 
+  <p style="text-align: center;" class="character">CHARACTER 2</p> 
+  <p style="text-align: center;" class="dialogue">Character 2 says things</p> 
+  <p style="text-align: left;" class="scene">INT. HOUSE - DAY</p> 
+  <p style="text-align: left;" class="action">Something else is happening!</p> 
+  <p style="text-align: center;" class="character">CHARACTER 3</p> 
+  <p style="text-align: center;" class="dialogue">Character 3 says things</p> 
+  <p style="text-align: center;" class="character">CHARACTER 4</p> 
+  <p style="text-align: center;" class="dialogue">Character 4 says things</p> 
+  <p class="dialogue scene" style="text-align: left;">EXT. HOUSE2 - NIGHT</p> 
+  <p class="dialogue action" style="text-align: left;">Something is going nuts</p> 
+  <p class="character action">CHARACTER 5</p> 
+  <p class="dialogue action">Character 5 says things</p> 
+  <p class="character action">CHARACTER 6</p> 
+  <p class="dialogue action">Character 6 says things</p> 
+  <p class="dialogue scene" style="text-align: left;">EXT. HOUSE2 - DAY</p> 
+  <p class="dialogue action" style="text-align: left;">Something is going nuts</p> 
+  <p class="character action">CHARACTER 7</p> 
+  <p class="dialogue action">Character 7 says things</p> 
+  <p class="character action">CHARACTER 8</p> 
+  <p class="dialogue action">Character 8 says things</p> 
+ </body>
+</html>

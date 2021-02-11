@@ -1,0 +1,54 @@
+<html dir="ltr">
+ <head> 
+  <style>
+body{
+font-family:courier !important;
+}
+.scene{text-transform:uppercase; text-align:left ;}
+.action{text-align:left ;}
+.character{text-transform:uppercase ; text-align:center ;}
+.dialogue{text-align:center ;}
+.parenthesis{text-align:center ;}
+</style> 
+  <meta name="title" content="the everyday life">
+  <meta name="story" content="Image Objects\img0.png">
+  <meta name="story" content="Image Objects\img1.png">
+  <meta name="story" content="Image Objects\img2.png">
+  <meta name="story" content="Image Objects\img3.png">
+  <meta name="story" content="Image Objects\img4.png">
+  <meta name="story" content="Image Objects\img5.png">
+  <meta name="story" content="Image Objects\img6.png">
+  <meta name="story" content="Image Objects\img7.png">
+  <meta name="story" content="Image Objects\img8.png">
+  <meta name="story" content="Image Objects\img9.png">
+  <meta name="story" content="Image Objects\img10.png">
+  <meta name="story" content="Image Objects\img11.png">
+  <meta name="story" content="Image Objects\img12.png">
+  <meta name="story" content="Image Objects\img13.png">
+  <meta name="story" content="Image Objects\img14.png">
+  <meta name="story" content="Image Objects\img15.png">
+  <meta name="story" content="Image Objects\img16.png">
+  <meta name="story" content="Image Objects\img17.png">
+  <meta name="story" content="Image Objects\img18.png">
+  <meta name="story" content="Image Objects\img19.png">
+  <meta name="story" content="Image Objects\img20.png">
+  <meta name="story" content="Image Objects\img21.png">
+  <meta name="story" content="Image Objects\img22.png">
+  <meta name="story" content="Image Objects\img23.png">
+  <meta name="story" content="Image Objects\img24.png">
+  <meta name="story" content="Image Objects\img25.png">
+  <meta name="story" content="Image Objects\img26.png">
+  <meta name="story" content="Image Objects\img27.png">
+  <meta name="story" content="Image Objects\img28.png">
+  <meta name="story" content="Image Objects\img29.png">
+  <meta name="story" content="Image Objects\img30.png">
+ </head> 
+ <body contenteditable="true"> 
+  <p class="scene">EXT. KYLE'S HOUSE.- DAY</p>
+  <p class="action">kyle went upstairs and unlock the door to his house.</p>
+  <p style="text-align: center;" class="character">KYLE</p>
+  <p style="text-align: center;" class="dialogue">shit.</p>
+  <p style="text-align: left;" class="action">He dropped his keys. He picks them up then instered into the keyhole.</p>
+  <p style="text-align: left;" class="action">he then opens the door and enters.</p>
+ </body>
+</html>

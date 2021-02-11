@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<AnchorPane fx:id="editor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #f5faff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controller">
+   <children>
+      <BorderPane layoutX="-2.0" layoutY="-2.0" prefHeight="1082.0" prefWidth="1922.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="979.0" prefWidth="465.0" spacing="10.0" style="-fx-background-color: #0069d4;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="detailsBtn" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="698.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="33.0" prefWidth="304.0" style="-fx-background-color: #fff; -fx-background-radius: 30;" text="Update Details" textFill="#0069d4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TreeTableView fx:id="Scenes11" prefHeight="278.0" prefWidth="465.0">
+                     <columns>
+                        <TreeTableColumn fx:id="scenecol" prefWidth="464.0" text="Scenes" />
+                     </columns>
+                  </TreeTableView>
+                  <HBox prefHeight="417.0" prefWidth="716.0">
+                     <children>
+                        <Pane prefHeight="499.0" prefWidth="658.0" style="-fx-background-color: #0069d4;">
+                           <children>
+                              <VBox prefHeight="421.0" prefWidth="466.0" style="-fx-background-color: #0069d4;">
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                                 <children>
+                                    <VBox prefHeight="245.0" prefWidth="465.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="1482.0" text="Title" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="scriptTitleBox" prefHeight="39.0" prefWidth="405.0" style="-fx-background-color: #007ad4; -fx-background-radius: 30;" stylesheets="@../css/style.css">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="30.0" left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="1482.0" text="Author" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="scriptAuthorBox" layoutX="20.0" layoutY="45.0" prefHeight="39.0" prefWidth="405.0" style="-fx-background-color: #007ad4; -fx-background-radius: 30;" stylesheets="@../css/style.css">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="30.0" left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Label alignment="CENTER" layoutX="10.0" layoutY="84.0" prefHeight="35.0" prefWidth="1482.0" text="Genre" textAlignment="CENTER" textFill="WHITE">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="scriptTitleBox111" layoutX="10.0" layoutY="119.0" prefHeight="39.0" prefWidth="405.0" style="-fx-background-color: #007ad4; -fx-background-radius: 30;" stylesheets="@../css/style.css">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="30.0" left="10.0" right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <Button fx:id="scriptinfosave1" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="54.0" prefWidth="469.0" style="-fx-background-color: #fff; -fx-background-radius: 30;" text="Save" textAlignment="CENTER" textFill="#0069d4">
+                                             <font>
+                                                <Font size="25.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="1919.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="logo2" fitHeight="94.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+
+                     <HBox.margin>
+                        <Insets left="50.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="100.0" prefWidth="149.0" text="Super Script" textFill="#0069d4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="100.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Button fx:id="viewTab2" alignment="TOP_CENTER" layoutX="270.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #0069d4; -fx-background-radius: 20;" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="34.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="newScriptBtn1" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#handleClicks" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #0069d4; -fx-background-radius: 20;" text="New Project" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="34.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="importBtn2" alignment="TOP_CENTER" layoutX="1198.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #0069d4; -fx-background-radius: 20;" text="Open Project" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="34.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="saveBtn" alignment="TOP_CENTER" layoutX="986.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #0069d4; -fx-background-radius: 20;" text="Save Script" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="34.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="saveBtn1" alignment="TOP_CENTER" layoutX="829.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #0069d4; -fx-background-radius: 20;" text="Save Storyboard" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="34.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="exportBtn2" alignment="TOP_CENTER" layoutX="1161.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="39.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #0069d4; -fx-background-radius: 20;" text="Export All" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="34.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="accSettings" layoutX="741.0" layoutY="47.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="45.0" style="-fx-background-radius: 40; -fx-background-color: transparent;" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="175.0" top="35.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: .6;">
+
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="cornerMax" layoutX="1026.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="45.0" style="-fx-background-radius: 40; -fx-background-color: transparent;" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: .6;">
+
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets top="35.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </top>
+         <right>
+            <VBox fx:id="scriptWriteBox1" prefHeight="982.0" prefWidth="652.0" style="-fx-background-color: #0069d4;" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane fx:id="viewImages" prefHeight="368.0" prefWidth="576.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <ImageView fx:id="SkyImage" fitHeight="411.0" fitWidth="711.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../58378.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="LocationImage1" fitHeight="411.0" fitWidth="711.0" layoutX="11.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../clipart-house-mansion-13.png" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="405.0" prefWidth="576.0">
+                           <children>
+                              <ImageView fx:id="CharacterSceneImage" fitHeight="411.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="CharacterSceneImage1" fitHeight="411.0" fitWidth="213.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="CharacterSceneImage2" fitHeight="411.0" fitWidth="213.0" layoutX="300.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="firstAction" alignment="CENTER" layoutX="10.0" layoutY="-4.0" prefHeight="10.0" prefWidth="892.0" style="-fx-background-color: #00000050;" text="FIRST ACTION" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets top="380.0" />
+                           </StackPane.margin>
+                        </Label>
+                        <Label fx:id="sceneTitle" alignment="CENTER" prefHeight="41.0" prefWidth="658.0" style="-fx-background-color: #00000050;" text="SCENE TITLE" textAlignment="CENTER" textFill="WHITE" underline="true">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                           <StackPane.margin>
+                              <Insets top="-370.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <VBox prefHeight="486.0" prefWidth="658.0">
+                     <children>
+                        <Button fx:id="saveStory" mnemonicParsing="false" prefHeight="54.0" prefWidth="803.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" text="Save Story Image" textFill="#0069d4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <GridPane fx:id="storyGrid1" prefHeight="269.0" prefWidth="658.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fx:id="sceneprev1" fitHeight="127.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="sceneprev2" fitHeight="127.0" fitWidth="221.0" layoutX="10.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                              <ImageView fx:id="sceneprev3" fitHeight="127.0" fitWidth="221.0" layoutX="652.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                              <ImageView fx:id="sceneprev4" fitHeight="127.0" fitWidth="221.0" layoutX="1294.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                              <ImageView fx:id="sceneprev5" fitHeight="127.0" fitWidth="221.0" layoutX="10.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ImageView fx:id="sceneprev6" fitHeight="127.0" fitWidth="221.0" layoutX="652.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="saveStory1" layoutX="10.0" layoutY="279.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="803.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" text="Save Page" textFill="#0069d4">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HTMLEditor fx:id="textPane1" htmlText="&lt;html&gt;&#10;&lt;head&gt;&#10;&lt;style&gt;&#10;body{&#10;font-family:courier !important;&#10;}&#10;.scene{text-transform:uppercase; text-align:left ;}&#10;.action{text-align:left ;}&#10;.character{text-transform:uppercase ; text-align:center ;}&#10;.dialogue{text-align:center ;}&#10;.parenthesis{text-align:center ;}&#10;&lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body contenteditable=&quot;true&quot;&gt;&#10;&lt;/body&#10;&gt;&lt;/html&gt;" prefHeight="674.0" prefWidth="799.0" snapToPixel="false" />
+                  <HBox prefHeight="235.0" prefWidth="799.0">
+                     <children>
+                        <VBox prefHeight="235.0" prefWidth="263.0">
+                           <children>
+                              <Label fx:id="LocTitle1" alignment="CENTER" prefHeight="40.0" prefWidth="267.0" text=" LOCATION" textAlignment="CENTER" textFill="#0069d4">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Label>
+                              <Pane fx:id="locoipane" prefHeight="131.0" prefWidth="210.0">
+                                 <children>
+                                    <ImageView fx:id="locObjectImage" fitHeight="130.0" fitWidth="262.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Button fx:id="locObjectUpload" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="303.0" style="-fx-background-color: transparent;" text="Upload Image" textAlignment="CENTER" textFill="#0069d4">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="235.0" prefWidth="272.0">
+                           <children>
+                              <Label fx:id="descTitle" alignment="CENTER" prefHeight="40.0" prefWidth="302.0" text="SKY" textAlignment="CENTER" textFill="#0069d4">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Label>
+                              <Pane fx:id="skyoipane" prefHeight="148.0" prefWidth="231.0">
+                                 <children>
+                                    <ImageView fx:id="ObjectImage" fitHeight="130.0" fitWidth="273.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Button fx:id="objectUpload" mnemonicParsing="false" prefHeight="44.0" prefWidth="305.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" text="Upload Image" textAlignment="CENTER" textFill="#0069d4">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <ButtonBar buttonMinWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="276.0" layoutY="10.0" prefHeight="235.0" prefWidth="264.0">
+                           <children>
+                              <Label fx:id="descTitle1" alignment="CENTER" prefHeight="40.0" prefWidth="302.0" text="CHARACTER" textAlignment="CENTER" textFill="#0069d4">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Label>
+                              <Pane fx:id="charoipane" prefHeight="149.0" prefWidth="231.0">
+                                 <children>
+                                    <ImageView fx:id="ObjectImage1" fitHeight="130.0" fitWidth="264.0" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </Pane>
+                              <Button fx:id="objectUpload1" mnemonicParsing="false" prefHeight="44.0" prefWidth="305.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" text="Upload Image" textAlignment="CENTER" textFill="#0069d4">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <ButtonBar buttonMinWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="100.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
