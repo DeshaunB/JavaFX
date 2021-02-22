@@ -13,13 +13,13 @@ import java.util.Vector;
 
 public class Profile {
     private static File profile;
+    public static File fileLocation;
     private static String body;
     private static double userID;
     private static Vector<String> Scripts = new Vector<>();
     private static Vector<Script> ScriptList;
     private static String name;
     private static String email;
-    private static String fileLocation;
 
 
 
@@ -31,9 +31,9 @@ public class Profile {
 
     public static void setEmail(String email) { Profile.email = email; }
 
-    public static String getFileLocation() { return fileLocation; }
+    public static File getFileLocation() { return fileLocation; }
 
-    public static void setFileLocation(String fileLocation) { Profile.fileLocation = fileLocation; }
+    public static void setFileLocation(File fileLocation) { Profile.fileLocation = fileLocation; }
 
 
     public Profile(){
@@ -41,34 +41,29 @@ public class Profile {
         profile = null;
         Scripts = new Vector<String>();
     }
+    private static void MkProfile(){
+        profile = new File("swpfi-user" + ".swpi");
+        body = "/ID#/SCRIPTWRITER PROFILE FOR USER NUMBER " + userID + "\n";
+        fileLocation = new File("ScriptBackups");
+        fileLocation.mkdir();
+        System.out.println(userID);
+        try {
+            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(profile, true)));
+            writer.println(body);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public static void CreateProfile(){
         if(profile == null || !profile.exists()) {
             body = "";
-            profile = new File("swpfi-user" + ".swpi");
-            body = "/ID#/SCRIPTWRITER PROFILE FOR USER NUMBER " + userID + "\n";
-            System.out.println(userID);
-            try {
-                PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(profile, true)));
-                writer.println(body);
-                writer.close();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            MkProfile();
         }else{
             profile.delete();
             body = "";
-            profile = new File("swpfi-user" + ".swpi");
-            body = "/ID#/SCRIPTWRITER PROFILE FOR USER NUMBER " + userID + "\n";
-            System.out.println(userID);
-            try {
-                PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(profile, true)));
-                writer.println(body);
-                writer.close();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            MkProfile();
             for (String script:
                  Scripts) {
                 AddScriptToProfile(script);
@@ -95,10 +90,12 @@ public class Profile {
                             userID = Double.parseDouble(body.replaceAll("[^0-9]+", " ").substring(0,6));
                     }
                     if(line.contains("/S#/")){
-                        Scripts.add(line.substring(line.lastIndexOf("/") + 1));
+                        File it = new File(line.substring(line.lastIndexOf("/") + 1));
+                        if(it.exists())
+                            Scripts.add(it.getName());
                     }
                     if(line.contains("/F#}")){
-                        fileLocation = line.substring(line.lastIndexOf("}") + 1);
+                        fileLocation = new File(line.substring(line.lastIndexOf("}") + 1));
                     }
                     if(line.contains("/NAME#/"))
                         name = line.substring(line.lastIndexOf("/") + 1);
@@ -172,24 +169,19 @@ public class Profile {
         return text;
     }
 
-    public static String getLatestFiles(int count, boolean single){
-        String result = "";
-        if(Scripts.size() > 0) {
-            if (count < Scripts.size() - 1 && !single) {
+    public static Vector<Script> getLatestFiles(int count){
+        Vector<Script> result = new Vector<>();
+        if(Scripts != null && Scripts.size() > 0) {
+            if (count < Scripts.size() - 1) {
                 for (int i = Scripts.size() - 1; i > (Scripts.size() - 1) - count; i--) {
-                    result += Scripts.get(i) + "\n";
+                    result.add(0, new Script(Scripts.get(i).substring(Scripts.get(i).lastIndexOf("//")+1), Scripts.get(i)));
                 }
-            } else if (count > Scripts.size() && !single) {
-                for (int i = Scripts.size() - 1; i > 0; i--) {
-                    result += Scripts.get(i) + "\n";
+            } else if (count > Scripts.size()) {
+                for (int i = 0; i < Scripts.size(); i++) {
+                    result.add(0, new Script(Scripts.get(i).substring(Scripts.get(i).lastIndexOf("//")+1), Scripts.get(i)));
                 }
-            } else if (count < Scripts.size() - 1 && single) {
-                return Scripts.get(Scripts.size() - 1 - count);
-            } else {
-                return Scripts.get(Scripts.size() - 1);
             }
-        }else
-            return "EMPTY SLOT";
+        }
         return result;
     }
     public static Vector<Script> getAllScripts(String textArea){

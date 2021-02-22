@@ -31,7 +31,7 @@ public class Script {
     private String body;
 
     public Script(String title, String location){
-        scriptTitle = title.substring(title.lastIndexOf("\\"));
+        scriptTitle = title;
 
         fileLocation = location;
 

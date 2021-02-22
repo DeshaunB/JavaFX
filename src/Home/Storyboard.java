@@ -19,11 +19,11 @@ public class Storyboard {
 
     public Storyboard(){
         try {
-            objects.add(new Image(new FileInputStream("58378.jpg")));
-            objects.add(new Image(new FileInputStream("Black_Box.png")));
-            objects.add(new Image(new FileInputStream("clipart-house-mansion-13.png")));
-            objects.add(new Image(new FileInputStream("pngtree-interior-architecture-home-interior-architecture-interior-renovation-image_13364.png")));
-            objects.add(new Image(new FileInputStream("stick.png")));
+            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\58378.jpg")));
+            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\Black_Box.png")));
+            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\clipart-house-mansion-13.png")));
+            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\pngtree-interior-architecture-home-interior-architecture-interior-renovation-image_13364.png")));
+            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\stick.png")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

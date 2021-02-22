@@ -295,11 +295,12 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-
         SetTable();
         if(textPane1 != null){
-            if(!textPane1.getHtmlText().isEmpty())
+            if(!textPane1.getHtmlText().isEmpty()) {
                 SetScenes();
+                story = new Storyboard();
+            }
             FileInputStream pic = null;
             try {
                 pic = new FileInputStream("SuperScriptCircle.png");
@@ -585,10 +586,6 @@ public class Controller implements Initializable {
                 logo.setImage(new Image(pic));
                 pic = new FileInputStream("settings.png");
                 settingsImg.setImage(new Image(pic));
-                pic = new FileInputStream("minimize.png");
-                minimizeImg.setImage(new Image(pic));
-                pic = new FileInputStream("xbutton.png");
-                xImg.setImage(new Image(pic));
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -660,14 +657,14 @@ public class Controller implements Initializable {
         story.scenes.add(i);
     }
      void playSound(String soundName){
-        String musicFile;
+        /*String musicFile;
         if(soundName == "button")
             musicFile = "button-16.mp3";
         else
             musicFile = "page-flip-03.mp3";
          Media sound = new Media(new File(musicFile).toURI().toString());
          MediaPlayer mediaPlayer = new MediaPlayer(sound);
-         mediaPlayer.play();
+         mediaPlayer.play();*/
     }
     public ObservableList<Script> getScripts(){
 
@@ -675,9 +672,7 @@ public class Controller implements Initializable {
         Vector<Script> script = Profile.getAllScripts(bodytext);
         for (Script file:
              script) {
-            File file1 = new File(file.getFileLocation());
-            if(file1.exists())
-                scripts.add(file);
+            scripts.add(file);
 
             file.edit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
@@ -822,30 +817,30 @@ public class Controller implements Initializable {
     @FXML
     private void handleClicks(ActionEvent event) throws IOException {
         if(event.getSource() == viewTab){
-            playSound("button");
+            //playSound("button");
             currentPage = "Main";
             Main.page1 = true;
             AnchorPane pane = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
             root.getChildren().setAll(pane);
 
         }else if(event.getSource() == viewTab2){
-            playSound("button");
+            //playSound("button");
             currentPage = "Main";
             Main.page1 = true;
             AnchorPane pane = FXMLLoader.load(getClass().getResource("fxml/Main.fxml"));
             editor.getChildren().setAll(pane);
 
-        }else if(event.getSource() == saveBtn1){
+        }/*else if(event.getSource() == saveBtn1){
             playSound("button");
             currentPage = "StoryboardView";
             Main.page1 = false;
 
             AnchorPane pane = FXMLLoader.load(getClass().getResource("fxml/StoryboardView.fxml"));
             editor.getChildren().setAll(pane);
-        }
+        }*/
         else if(event.getSource() == newTab){
 
-            playSound("paper");
+            //playSound("paper");
             currentPage = "Editor";
             story = new Storyboard();
             Main.page1 = false;

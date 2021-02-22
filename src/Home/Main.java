@@ -44,12 +44,6 @@ public class Main extends Application {
         primaryStage.setFullScreen(true);
         //primaryStage.initStyle(StageStyle.UNDECORATED);
 
-
-
-
-
-
-
         primaryStage.show();
     }
 
