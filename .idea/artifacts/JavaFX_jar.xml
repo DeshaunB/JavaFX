@@ -22,7 +22,7 @@
       <element id="library" level="project" name="javafx-swt" />
       <element id="dir-copy" path="$USER_HOME$/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/bin" />
       <element id="dir-copy" path="$PROJECT_DIR$/../../../../../Program Files/Java/jdk-11.0.10/bin" />
-      <element id="dir-copy" path="$USER_HOME$/Downloads/openjfx-11.0.2_osx-x64_bin-sdk/javafx-sdk-11.0.2/lib" />
+      <element id="dir-copy" path="$USER_HOME$/Downloads/zulu11.45.27-ca-jdk11.0.10-macosx_x64/zulu11.45.27-ca-jdk11.0.10-macosx_x64/zulu-11.jdk/Contents/Home/bin" />
     </root>
   </artifact>
 </component>
