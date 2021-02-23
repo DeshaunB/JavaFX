@@ -1,11 +1,16 @@
 package Home;
 
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 
+import javax.imageio.ImageIO;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Vector;
 
 import static Home.Main.story;
@@ -19,12 +24,29 @@ public class Storyboard {
 
     public Storyboard(){
         try {
-            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\58378.jpg")));
-            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\Black_Box.png")));
-            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\clipart-house-mansion-13.png")));
-            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\pngtree-interior-architecture-home-interior-architecture-interior-renovation-image_13364.png")));
-            objects.add(new Image(new FileInputStream("C:\\Users\\De'Shaun\\Desktop\\MidTerm\\JavaFX\\stick.png")));
-        } catch (FileNotFoundException e) {
+            //0 - DEFAULT DAY SKY
+            URL url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/58378.jpg?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+            //1 - DEFAULT NIGHT SKY
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/Black_Box.png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+            //2 - DEFAULT OUTSIDE BUILDING
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/clipart-house-mansion-13.png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+            //3 - DEFAULT INSIDE HOUSE
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/pngtree-interior-architecture-home-interior-architecture-interior-renovation-image_13364.png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+            //4 - DEFAULT CHARACTER
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/stick.png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+        } catch (FileNotFoundException | MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

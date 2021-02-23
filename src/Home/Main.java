@@ -44,6 +44,10 @@ public class Main extends Application {
         primaryStage.setFullScreen(true);
         //primaryStage.initStyle(StageStyle.UNDECORATED);
 
+        File directory = new File("Scripts\\");
+        if(!directory.exists())
+            directory.mkdir();
+
         primaryStage.show();
     }
 

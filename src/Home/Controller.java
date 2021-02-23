@@ -45,6 +45,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
 import java.util.Timer;
@@ -253,6 +254,9 @@ public class Controller implements Initializable {
     @FXML
     Pane charoipane;
 
+    @FXML
+    private ImageView ObjectImage1;
+
     private String currentPage;
     private Vector<String> locations;
     private Vector<String> scenes;
@@ -303,9 +307,10 @@ public class Controller implements Initializable {
             }
             FileInputStream pic = null;
             try {
-                pic = new FileInputStream("SuperScriptCircle.png");
-                logo2.setImage(new Image(pic));
-            } catch (FileNotFoundException e) {
+
+                url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/SuperScriptCircle.png?raw=true");
+                logo2.setImage(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+            } catch (IOException e) {
                 e.printStackTrace();
             }
             objectUpload.setOnAction(new EventHandler<ActionEvent>() {
@@ -439,6 +444,12 @@ public class Controller implements Initializable {
                         }
 
                     }
+                    for(Character ch:
+                            currentScene.getCharacters()){
+                        if(ch.getCharacterName().equals(selectedItem)){
+                            ObjectImage1.setImage(ch.getImageLocation());
+                        }
+                    }
                         if(selectedItem.contains("INT.") || selectedItem.contains("EXT.")) {
                             item = selectedItem;
                             sceneTitle.setText(item);
@@ -472,11 +483,11 @@ public class Controller implements Initializable {
                                     //CHARACTERS
                                     Image cim = null;
                                     if(scene.getCharacters().size() == 1){
-                                        cim = new Image(scene.getCharacters().get(0).getImageLocation());
+                                        cim = scene.getCharacters().get(0).getImageLocation();
                                         CharacterSceneImage.setImage(cim);
                                     }else if(scene.getCharacters().size() == 2){
                                         for (int i = 0; i < scene.getCharacters().size(); i++) {
-                                            cim = new Image(scene.getCharacters().get(i).getImageLocation());
+                                            cim = scene.getCharacters().get(i).getImageLocation();
                                             if(i == 0){
                                                 CharacterSceneImage.setImage(cim);
                                             }else if(i == 1){
@@ -485,7 +496,7 @@ public class Controller implements Initializable {
                                         }
                                     }else if (scene.getCharacters().size() >= 3){
                                         for (int i = 0; i < scene.getCharacters().size(); i++) {
-                                            cim = new Image(scene.getCharacters().get(i).getImageLocation());
+                                            cim = scene.getCharacters().get(i).getImageLocation();
                                             if(i == 0)
                                                 CharacterSceneImage.setImage(cim);
                                             else if(i == 1)
@@ -497,6 +508,7 @@ public class Controller implements Initializable {
                                             }
                                         }
                                     }
+
 
 
                                     currentScene.setSceneHeading(item);
@@ -582,11 +594,12 @@ public class Controller implements Initializable {
             }, 0, 1000);
         }else if(Main.page1){
             try {
-                FileInputStream pic = new FileInputStream("SuperScriptCircle.png");
-                logo.setImage(new Image(pic));
-                pic = new FileInputStream("settings.png");
-                settingsImg.setImage(new Image(pic));
-            } catch (FileNotFoundException e) {
+                url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/SuperScriptCircle.png?raw=true");
+                logo.setImage(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+                url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/settings.png?raw=true");
+                settingsImg.setImage(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+            } catch (IOException e) {
                 e.printStackTrace();
             }
 
@@ -896,8 +909,11 @@ public class Controller implements Initializable {
             playSound("paper");
             FIleHandling.SaveScriptFile(textPane1.getHtmlText(), fileName, true,true);
 
-            ImageIO.write(SwingFXUtils.fromFXImage(i, null), "png", new File(".\\Scripts\\ScriptWriterBackups\\" + fileName + "\\" + fileName + "_storyboard.png"));
-            File file = new File(".\\Scripts\\ScriptWriterBackups\\" + fileName + "\\" + "Image Objects");
+            File folderDir = new File("Scripts\\" + fileName + "\\");
+            if(!folderDir.exists())
+                folderDir.mkdirs();
+            ImageIO.write(SwingFXUtils.fromFXImage(i, null), "png", new File(folderDir.getAbsolutePath() + "\\" + fileName + "_storyboard.png"));
+            File file = new File(folderDir.getAbsolutePath() + "\\" + "Image Objects");
             if(!file.exists())
                 file.mkdir();
 
@@ -908,7 +924,7 @@ public class Controller implements Initializable {
                 num++;
             }
 
-            file = new File(".\\Scripts\\ScriptWriterBackups\\" + fileName + "\\" + "Individual Scenes");
+            file = new File(folderDir.getAbsolutePath() + "\\" + "Individual Scenes");
             if(!file.exists())
                 file.mkdir();
 
@@ -1039,16 +1055,16 @@ public class Controller implements Initializable {
 
             switch(sceneVector.get(0).getCharacters().size()){
                 case 1:
-                    CharacterSceneImage.setImage(new Image(sceneVector.get(0).getCharacters().get(0).getImageLocation()));
+                    CharacterSceneImage.setImage(sceneVector.get(0).getCharacters().get(0).getImageLocation());
                     break;
                 case 2:
-                    CharacterSceneImage.setImage(new Image(sceneVector.get(0).getCharacters().get(0).getImageLocation()));
-                    CharacterSceneImage2.setImage(new Image(sceneVector.get(0).getCharacters().get(1).getImageLocation()));
+                    CharacterSceneImage.setImage(sceneVector.get(0).getCharacters().get(0).getImageLocation());
+                    CharacterSceneImage2.setImage(sceneVector.get(0).getCharacters().get(1).getImageLocation());
                     break;
                 default:
-                    CharacterSceneImage.setImage(new Image(sceneVector.get(0).getCharacters().get(0).getImageLocation()));
-                    CharacterSceneImage1.setImage(new Image(sceneVector.get(0).getCharacters().get(1).getImageLocation()));
-                    CharacterSceneImage2.setImage(new Image(sceneVector.get(0).getCharacters().get(2).getImageLocation()));
+                    CharacterSceneImage.setImage(sceneVector.get(0).getCharacters().get(0).getImageLocation());
+                    CharacterSceneImage1.setImage(sceneVector.get(0).getCharacters().get(1).getImageLocation());
+                    CharacterSceneImage2.setImage(sceneVector.get(0).getCharacters().get(2).getImageLocation());
                     break;
             }
             sceneTitle.setText(sceneVector.get(0).getSceneHeading());

@@ -78,14 +78,14 @@ public class FIleHandling {
     public static void SaveScriptFile(String text, String filename, boolean isPDFToo, boolean addToProfile){
 
             //Set the file's name to be the name & location specified by the user.
-            File directory = new File(".\\Scripts\\ScriptWriterBackups\\" + filename + "\\");
+            File directory = new File("Scripts\\" + filename + "\\");
             if(!directory.exists())
                 directory.mkdir();
 
             String fileName = isPDFToo ? filename : filename;
 
             //Create New File
-            File script = new File(".\\Scripts\\ScriptWriterBackups\\" + fileName + "\\" + fileName + ".swsf");
+            File script = new File(directory + "\\" + fileName + ".swsf");
 
             Document scriptdoc = Jsoup.parse(text);
             Elements scriptWords = scriptdoc.select("p");
@@ -242,7 +242,7 @@ public class FIleHandling {
 
             content.close();
 
-            doc.save(".\\Scripts\\ScriptWriterBackups\\" + fileName);
+            doc.save("Scripts\\" + fileName);
             doc.close();
 
         } catch (IOException e) {
