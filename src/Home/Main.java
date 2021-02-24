@@ -43,7 +43,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 1213, 641));
         primaryStage.setFullScreen(true);
         //primaryStage.initStyle(StageStyle.UNDECORATED);
-
+        //comment
         File directory = new File("Scripts\\");
         if(!directory.exists())
             directory.mkdir();
