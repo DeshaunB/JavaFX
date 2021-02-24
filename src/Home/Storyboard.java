@@ -44,6 +44,22 @@ public class Storyboard {
             url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/stick.png?raw=true");
             objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
 
+            //5 - DEFAULT OUTSIDE OFFICE
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/271-2718498_building-png-office-building-clipart-png-transparent-png.png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+            //6 - DEFAULT INSIDE OFFICE
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/be0cff7ae8fab70dfe0c8ecf546136cf.png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+            //5 - DEFAULT OUTSIDE CITY
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/unnamed%20(2).png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
+            //6 - DEFAULT INSIDE CITY
+            url = new URL("https://github.com/DeshaunB/JavaFX/blob/master/112712783-stock-vector-cartoon-empty-subway-train-card-poster-vector.png?raw=true");
+            objects.add(SwingFXUtils.toFXImage(ImageIO.read(url), null));
+
         } catch (FileNotFoundException | MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

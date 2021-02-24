@@ -78,7 +78,7 @@ public class ReadText {
 
         return scenes;
     }
-    public static Vector<Scene> toSceneVec(String text, Vector<String> locations){
+    public static Vector<Scene> toSceneVec(String text, Vector<Scene> scenes){
         Vector<Scene> Scenes = new Vector<>();
         Document doc = Jsoup.parse(text);
         Elements lines = doc.select("p");
@@ -89,8 +89,9 @@ public class ReadText {
             Element line = lines.get(i);
             String upper = line.text().toUpperCase();
             if(line.text().toUpperCase().contains("INT.") || line.text().toUpperCase().contains("EXT.")) {
-                Scenes.add(new Scene(line.text().toUpperCase(), id));
                 s++;
+                Scenes.add(new Scene(line.text().toUpperCase(), id));
+                id++;
                 c = -1;
                 if(!Main.story.locations.isEmpty()){
                     Location loc = null;

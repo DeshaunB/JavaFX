@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -450,6 +451,12 @@ public class Controller implements Initializable {
                             ObjectImage1.setImage(ch.getImageLocation());
                         }
                     }
+                    for(String action:
+                    currentScene.getActions()){
+                        if(action.equals(selectedItem)){
+                            firstAction.setText(action);
+                        }
+                    }
                         if(selectedItem.contains("INT.") || selectedItem.contains("EXT.")) {
                             item = selectedItem;
                             sceneTitle.setText(item);
@@ -667,6 +674,7 @@ public class Controller implements Initializable {
     void grabImage(StackPane object){
 
         Image i = object.snapshot(null,null);
+
         story.scenes.add(i);
     }
      void playSound(String soundName){
@@ -757,7 +765,7 @@ public class Controller implements Initializable {
     }
     private void SetScenes() {
 
-        sceneVector = ReadText.toSceneVec(textPane1.getHtmlText(), locations);
+        sceneVector = ReadText.toSceneVec(textPane1.getHtmlText(), sceneVector);
 
         TreeItem<String> root = new TreeItem<>("View Scenes");
 
@@ -854,13 +862,20 @@ public class Controller implements Initializable {
         else if(event.getSource() == newTab){
 
             //playSound("paper");
+
             currentPage = "Editor";
             story = new Storyboard();
             Main.page1 = false;
             bodytext = "";
-            AnchorPane pane = FXMLLoader.load(getClass().getResource("fxml/Editor2.fxml"));
-            root.getChildren().setAll(pane);
 
+            Stage primaryStage = new Stage();
+            //AnchorPane pane = FXMLLoader.load(getClass().getResource("fxml/Editor2.fxml"));
+            //root.getChildren().setAll(pane);
+            Parent root = FXMLLoader.load(getClass().getResource("fxml/" + currentPage +"2.fxml"));
+            primaryStage.setTitle("SuperScript");
+            primaryStage.setScene(new javafx.scene.Scene(root, 1213, 641));
+            primaryStage.show();
+            primaryStage.setMaximized(true);
             if(Scenes11 != null) {
 
                 //Scenes11.getItems().clear();
@@ -954,6 +969,23 @@ public class Controller implements Initializable {
             scriptAuthorBox.setText("");
 
             story = new Storyboard();
+
+            SetScenes();
+
+            SkyImage.setImage(null);
+            LocationImage1.setImage(null);
+            CharacterSceneImage1.setImage(null);
+            CharacterSceneImage.setImage(null);
+            CharacterSceneImage2.setImage(null);
+
+            sceneprev1.setImage(null);
+            sceneprev2.setImage(null);
+            sceneprev3.setImage(null);
+            sceneprev4.setImage(null);
+            sceneprev5.setImage(null);
+            sceneprev6.setImage(null);
+
+            scriptTitleBox.setText("");
             //Scenes11.getItems().clear();
 
 

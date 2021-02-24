@@ -39,7 +39,7 @@ public class Main extends Application {
             Profile.CreateProfile();
 
         Parent root = FXMLLoader.load(getClass().getResource("fxml/" + startPage +".fxml"));
-        primaryStage.setTitle("ScriptWriter");
+        primaryStage.setTitle("SuperScript");
         primaryStage.setScene(new Scene(root, 1213, 641));
         primaryStage.setFullScreen(true);
         //primaryStage.initStyle(StageStyle.UNDECORATED);

@@ -37,7 +37,16 @@ public class Location {
     private Image EXT;
     public Location(String name){
         this.name = name;
-        INT = story.objects.get(3);
-        EXT = story.objects.get(2);
+        if(name.contains("HOUSE")){
+            INT = story.objects.get(3);
+            EXT = story.objects.get(2);
+        }else if(name.contains("OFFICE")){
+            INT = story.objects.get(6);
+            EXT = story.objects.get(5);
+        }else if(name.contains("CITY")){
+            INT = story.objects.get(6);
+            EXT = story.objects.get(7);
+        }
+
     }
 }

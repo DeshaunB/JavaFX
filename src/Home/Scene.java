@@ -102,5 +102,17 @@ public class Scene {
 
     }
 
+    public boolean equals(Scene s){
+        this.actions.clear();
+        this.actions.addAll(s.getActions());
+        this.characters.clear();
+        this.characters.addAll(s.getCharacters());
+        this.dayImage = s.getDayImage();
+        this.nightImage = s.getNightImage();
+        this.setBgImage(s.getBgImage());
+        this.location = s.getLocation();
+        this.sceneHeading.equals(s.getSceneHeading());
+        return true;
+    }
 
 }
