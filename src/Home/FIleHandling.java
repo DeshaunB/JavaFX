@@ -126,11 +126,17 @@ public class FIleHandling {
                             scriptBody[i+1] = scriptWords.get(i).text();
                             i++;
                         }
+                        else if(scriptWords.get(i).text().isEmpty() || scriptWords.get(i).text().isBlank()){
+                            scriptWords.get(i).removeAttr("class");
+                            scriptWords.get(i).removeAttr("style");
+                            scriptBody[i] = scriptWords.get(i).text();
+                        }
                         else {
                             if(!scriptWords.get(i).hasClass("action"))
                                 scriptWords.get(i).addClass("action");
                             scriptBody[i] = scriptWords.get(i).text();
                         }
+
                     }
 
 

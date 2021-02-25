@@ -44,7 +44,7 @@ public class Location {
             INT = story.objects.get(6);
             EXT = story.objects.get(5);
         }else if(name.contains("CITY")){
-            INT = story.objects.get(6);
+            INT = story.objects.get(8);
             EXT = story.objects.get(7);
         }
 
