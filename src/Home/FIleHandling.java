@@ -78,14 +78,14 @@ public class FIleHandling {
     public static void SaveScriptFile(String text, String filename, boolean isPDFToo, boolean addToProfile){
 
             //Set the file's name to be the name & location specified by the user.
-            File directory = new File("Scripts\\" + filename + "\\");
+            File directory = new File("Scripts" + File.separator + filename + File.separator);
             if(!directory.exists())
                 directory.mkdir();
 
             String fileName = isPDFToo ? filename : filename;
 
             //Create New File
-            File script = new File(directory + "\\" + fileName + ".swsf");
+            File script = new File(directory + File.separator + fileName + ".swsf");
 
             Document scriptdoc = Jsoup.parse(text);
             Elements scriptWords = scriptdoc.select("p");
@@ -98,7 +98,7 @@ public class FIleHandling {
         scriptdoc.head().appendElement("meta").attr("name","title").attr("content", fileName);
         for (Image scene:
              Main.story.objects) {
-            scriptdoc.head().appendElement("meta").attr("name","story").attr("content","Image Objects" + "\\" + "img" + num + ".png");
+            scriptdoc.head().appendElement("meta").attr("name","story").attr("content","Image Objects" + File.separator + "img" + num + ".png");
             num++;
         }
             if(scriptBody.length > 0) {
@@ -136,7 +136,7 @@ public class FIleHandling {
                 fileBody = scriptdoc.html();
                 if(isPDFToo) {
 
-                    CreatePDFFile(directory.getName() + "\\" + fileName + ".pdf", fileBody);
+                    CreatePDFFile(directory.getName() + File.separator + fileName + ".pdf", fileBody);
                 }
 
 
@@ -242,7 +242,7 @@ public class FIleHandling {
 
             content.close();
 
-            doc.save("Scripts\\" + fileName);
+            doc.save("Scripts" + File.separator + fileName);
             doc.close();
 
         } catch (IOException e) {

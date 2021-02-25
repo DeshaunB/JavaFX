@@ -742,7 +742,7 @@ public class Controller implements Initializable {
                         }
                     }
                     bodytext = FIleHandling.getTextFromFile(file.getFileLocation());
-                    FIleHandling.SaveScriptFile(bodytext,".\\Scripts\\" + scriptTitle, true, false);
+                    FIleHandling.SaveScriptFile(bodytext,"."+File.separator + "Scripts" + File.separator + scriptTitle, true, false);
                 }
             });
         }
@@ -926,12 +926,12 @@ public class Controller implements Initializable {
 
             FIleHandling.SaveScriptFile(textPane1.getHtmlText(), fileName, true,true);
 
-            File folderDir = new File("Scripts\\" + fileName + "\\");
+            File folderDir = new File("Scripts" + File.separator + fileName + File.separator);
 
             if(!folderDir.exists())
                 folderDir.mkdirs();
-            ImageIO.write(SwingFXUtils.fromFXImage(i, null), "png", new File(folderDir.getAbsolutePath() + "\\" + fileName + "_storyboard.png"));
-            File file = new File(folderDir.getAbsolutePath() + "\\" + "Image Objects");
+            ImageIO.write(SwingFXUtils.fromFXImage(i, null), "png", new File(folderDir.getAbsolutePath() + File.separator + fileName + "_storyboard.png"));
+            File file = new File(folderDir.getAbsolutePath() + File.separator + "Image Objects");
 
             if(!file.exists())
                 file.mkdir();
@@ -939,18 +939,18 @@ public class Controller implements Initializable {
             int num = 0;
             for (Image object:
                     story.objects) {
-                ImageIO.write(SwingFXUtils.fromFXImage(object, null), "png", new File(file + "\\" + "img" + num + ".png"));
+                ImageIO.write(SwingFXUtils.fromFXImage(object, null), "png", new File(file + File.separator + "img" + num + ".png"));
                 num++;
             }
 
-            file = new File(folderDir.getAbsolutePath() + "\\" + "Individual Scenes");
+            file = new File(folderDir.getAbsolutePath() + File.separator + "Individual Scenes");
             if(!file.exists())
                 file.mkdir();
 
             num = 1;
             for(Image scene:
             story.scenes){
-                ImageIO.write(SwingFXUtils.fromFXImage(scene, null), "png", new File(file + "\\" + "Scene" + num + ".png"));
+                ImageIO.write(SwingFXUtils.fromFXImage(scene, null), "png", new File(file + File.separator + "Scene" + num + ".png"));
                 num++;
             }
             System.out.println(folderDir.getAbsolutePath() + "TESTING FILE: " + file);
@@ -1015,7 +1015,7 @@ public class Controller implements Initializable {
 
             File selectedDirectory = chooser.showDialog(importBtn2.getScene().getWindow());
 
-            bodytext = Profile.OpenScript(selectedDirectory.getAbsolutePath() + "\\" + selectedDirectory.getName() + ".swsf");
+            bodytext = Profile.OpenScript(selectedDirectory.getAbsolutePath() + File.separator + selectedDirectory.getName() + ".swsf");
             textPane1.setHtmlText(bodytext);
 
             Document scriptdoc = Jsoup.parse(bodytext);
@@ -1082,7 +1082,6 @@ public class Controller implements Initializable {
 
             workingFile = selectedDirectory.getAbsolutePath();
             SetScenes();
-            sceneVector = ReadText.toSceneVec(bodytext, sceneVector);
             SkyImage.setImage(sceneVector.get(0).getBgImage());
             if(sceneVector.get(0).getLocation().getName().contains("EXT."))
                 LocationImage1.setImage(sceneVector.get(0).getLocation().getEXT());
