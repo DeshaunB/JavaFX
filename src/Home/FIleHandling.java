@@ -80,12 +80,14 @@ public class FIleHandling {
             //Set the file's name to be the name & location specified by the user.
             File directory = new File("Scripts" + File.separator + filename + File.separator);
             if(!directory.exists())
-                directory.mkdir();
+                directory.mkdirs();
 
             String fileName = isPDFToo ? filename : filename;
 
             //Create New File
             File script = new File(directory + File.separator + fileName + ".swsf");
+
+            System.out.println("SCRIPT:" + script.getAbsolutePath());
 
             Document scriptdoc = Jsoup.parse(text);
             Elements scriptWords = scriptdoc.select("p");
@@ -155,6 +157,7 @@ public class FIleHandling {
             if(!Profile.getScripts().contains(fileName) && addToProfile)
                 Profile.AddScriptToProfile(fileName);
 
+            System.out.println("Method End: " + script.getAbsolutePath());
     }
     public static String getTextFromFile(String filename){
         File file = new File(filename);
@@ -244,6 +247,7 @@ public class FIleHandling {
 
             doc.save("Scripts" + File.separator + fileName);
             doc.close();
+            System.out.println(doc.getDocumentInformation());
 
         } catch (IOException e) {
             e.printStackTrace();
