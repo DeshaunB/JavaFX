@@ -922,13 +922,17 @@ public class Controller implements Initializable {
             String fileName = scriptTitleBox.getText();
             Image i = story.snap(storyGrid1, 3);
             playSound("paper");
+
+
             FIleHandling.SaveScriptFile(textPane1.getHtmlText(), fileName, true,true);
 
             File folderDir = new File("Scripts\\" + fileName + "\\");
+
             if(!folderDir.exists())
                 folderDir.mkdirs();
             ImageIO.write(SwingFXUtils.fromFXImage(i, null), "png", new File(folderDir.getAbsolutePath() + "\\" + fileName + "_storyboard.png"));
             File file = new File(folderDir.getAbsolutePath() + "\\" + "Image Objects");
+
             if(!file.exists())
                 file.mkdir();
 
@@ -949,6 +953,7 @@ public class Controller implements Initializable {
                 ImageIO.write(SwingFXUtils.fromFXImage(scene, null), "png", new File(file + "\\" + "Scene" + num + ".png"));
                 num++;
             }
+            System.out.println(folderDir.getAbsolutePath() + "TESTING FILE: " + file);
 
             Desktop.getDesktop().open(file.getParentFile());
 
@@ -1008,10 +1013,6 @@ public class Controller implements Initializable {
 
             chooser.setTitle("Import File");
 
-            File defaultDirectory = new File("./");
-
-            chooser.setInitialDirectory(defaultDirectory);
-
             File selectedDirectory = chooser.showDialog(importBtn2.getScene().getWindow());
 
             bodytext = Profile.OpenScript(selectedDirectory.getAbsolutePath() + "\\" + selectedDirectory.getName() + ".swsf");
@@ -1020,7 +1021,9 @@ public class Controller implements Initializable {
             Document scriptdoc = Jsoup.parse(bodytext);
             Elements scriptWords = scriptdoc.select("meta");
 
-            scriptTitleBox.setText(scriptWords.get(0).attr("content"));
+
+            if(scriptWords.size() > 0)
+                scriptTitleBox.setText(scriptWords.get(0).attr("content"));
 
             scriptTitle = selectedDirectory.getName();
             for (File file:
