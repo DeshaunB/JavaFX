@@ -327,10 +327,12 @@ public class Controller implements Initializable {
                             File chosen = chooser.showOpenDialog(importBtn2.getScene().getWindow());
                             try {
                                 if(scene.getBgImage() == scene.getDayImage()) {
+                                    story.objects.set(0, new Image(new FileInputStream(chosen.getAbsoluteFile())));
                                     scene.setDayImage(new Image(new FileInputStream(chosen.getAbsoluteFile())));
                                     scene.setBgImage(scene.getDayImage());
                                 }
                                 else if(scene.getBgImage() == scene.getNightImage()) {
+                                    story.objects.set(1, new Image(new FileInputStream(chosen.getAbsoluteFile())));
                                     scene.setNightImage(new Image(new FileInputStream(chosen.getAbsoluteFile())));
                                     scene.setBgImage(scene.getNightImage());
                                 }
@@ -342,8 +344,9 @@ public class Controller implements Initializable {
                             Image im = scene.getBgImage();
                             SkyImage.setImage(im);
                             ObjectImage.setImage(im);
-                            objectFile.setText(im.getUrl());
                             story.snap(skyoipane, 2);
+                            story.snap(SkyImage, 1);
+
                     }
                 }
             });

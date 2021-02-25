@@ -22,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane fx:id="editor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #f5faff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controller">
+<AnchorPane fx:id="editor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1627.0" style="-fx-background-color: #f5faff;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controller">
    <children>
       <BorderPane prefHeight="1002.0" prefWidth="1741.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <left>
@@ -48,7 +48,7 @@
                      <children>
                         <Pane prefHeight="499.0" prefWidth="658.0" style="-fx-background-color: #0069d4;">
                            <children>
-                              <VBox prefHeight="421.0" prefWidth="466.0" style="-fx-background-color: #0069d4;">
+                              <VBox prefHeight="431.0" prefWidth="466.0" style="-fx-background-color: #0069d4;">
                                  <padding>
                                     <Insets right="10.0" />
                                  </padding>
@@ -60,7 +60,7 @@
                                                 <Font size="24.0" />
                                              </font>
                                           </Label>
-                                          <TextField fx:id="scriptTitleBox" prefHeight="39.0" prefWidth="405.0" promptText="Script Title" style="-fx-background-color: #007ad4; -fx-background-radius: 30; -fx-border-color: #ffff; -fx-border-radius: 30; -fx-border-width: 2;" stylesheets="@../css/style.css">
+                                          <TextField fx:id="scriptTitleBox" prefHeight="37.0" prefWidth="412.0" promptText="Script Title" style="-fx-background-color: #007ad4; -fx-background-radius: 30; -fx-border-color: #ffff; -fx-border-radius: 30; -fx-border-width: 2;" stylesheets="@../css/style.css" VBox.vgrow="ALWAYS">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
@@ -215,9 +215,9 @@
             </HBox>
          </top>
          <right>
-            <VBox fx:id="scriptWriteBox1" prefHeight="982.0" prefWidth="652.0" style="-fx-background-color: #0069d4;" BorderPane.alignment="CENTER">
+            <VBox fx:id="scriptWriteBox1" prefHeight="902.0" prefWidth="503.0" style="-fx-background-color: #0069d4;" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="saveStory" mnemonicParsing="false" prefHeight="54.0" prefWidth="803.0" style="-fx-background-color: #fff; -fx-background-radius: 30;" text="Save Image" textFill="#0069d4">
+                  <Button fx:id="saveStory" mnemonicParsing="false" prefHeight="44.0" prefWidth="547.0" style="-fx-background-color: #fff; -fx-background-radius: 30;" text="Save Image" textFill="#0069d4">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -228,50 +228,50 @@
                         <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
                      </VBox.margin>
                   </Button>
-                  <StackPane fx:id="viewImages" prefHeight="368.0" prefWidth="576.0" style="-fx-background-color: #fff;">
+                  <StackPane fx:id="viewImages" prefHeight="305.0" prefWidth="609.0" style="-fx-background-color: #fff;" VBox.vgrow="ALWAYS">
                      <children>
-                        <ImageView fx:id="SkyImage" fitHeight="411.0" fitWidth="711.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="SkyImage" fitHeight="411.0" fitWidth="543.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../58378.jpg" />
                            </image>
                         </ImageView>
-                        <ImageView fx:id="LocationImage1" fitHeight="411.0" fitWidth="711.0" layoutX="11.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="LocationImage1" fitHeight="411.0" fitWidth="460.0" layoutX="11.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../clipart-house-mansion-13.png" />
                            </image>
                         </ImageView>
-                        <HBox prefHeight="405.0" prefWidth="576.0">
+                        <HBox prefHeight="347.0" prefWidth="559.0">
                            <children>
-                              <ImageView fx:id="CharacterSceneImage" fitHeight="411.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="CharacterSceneImage" fitHeight="347.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                  <HBox.margin>
                                     <Insets left="10.0" />
                                  </HBox.margin>
                               </ImageView>
-                              <ImageView fx:id="CharacterSceneImage1" fitHeight="411.0" fitWidth="213.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="CharacterSceneImage2" fitHeight="411.0" fitWidth="213.0" layoutX="300.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="CharacterSceneImage1" fitHeight="347.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="CharacterSceneImage2" fitHeight="347.0" fitWidth="163.0" layoutX="300.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </HBox>
-                        <Label fx:id="firstAction" alignment="CENTER" layoutX="10.0" layoutY="-4.0" prefHeight="10.0" prefWidth="892.0" style="-fx-background-color: #00000050;" text="FIRST ACTION" textAlignment="CENTER" textFill="WHITE">
+                        <Label fx:id="firstAction" alignment="CENTER" layoutX="10.0" layoutY="-4.0" prefHeight="0.0" prefWidth="543.0" style="-fx-background-color: #00000050;" text="FIRST ACTION" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="21.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets top="380.0" />
+                              <Insets top="300.0" />
                            </StackPane.margin>
                         </Label>
-                        <Label fx:id="sceneTitle" alignment="CENTER" prefHeight="41.0" prefWidth="658.0" style="-fx-background-color: #00000050;" text="SCENE TITLE" textAlignment="CENTER" textFill="WHITE" underline="true">
+                        <Label fx:id="sceneTitle" alignment="CENTER" prefHeight="41.0" prefWidth="545.0" style="-fx-background-color: #00000050;" text="SCENE TITLE" textAlignment="CENTER" textFill="WHITE" underline="true">
                            <font>
                               <Font name="System Bold" size="23.0" />
                            </font>
                            <StackPane.margin>
-                              <Insets top="-370.0" />
+                              <Insets top="-300.0" />
                            </StackPane.margin>
                         </Label>
                      </children>
                   </StackPane>
-                  <VBox prefHeight="486.0" prefWidth="658.0">
+                  <VBox prefHeight="486.0" prefWidth="658.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <GridPane fx:id="storyGrid1" prefHeight="269.0" prefWidth="658.0">
+                        <GridPane fx:id="storyGrid1" prefHeight="269.0" prefWidth="537.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -282,18 +282,18 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <ImageView fx:id="sceneprev1" fitHeight="127.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="sceneprev2" fitHeight="127.0" fitWidth="212.0" layoutX="10.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-                              <ImageView fx:id="sceneprev3" fitHeight="127.0" fitWidth="214.0" layoutX="652.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-                              <ImageView fx:id="sceneprev4" fitHeight="127.0" fitWidth="212.0" layoutX="1294.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-                              <ImageView fx:id="sceneprev5" fitHeight="127.0" fitWidth="212.0" layoutX="10.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <ImageView fx:id="sceneprev6" fitHeight="127.0" fitWidth="211.0" layoutX="652.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <ImageView fx:id="sceneprev1" fitHeight="127.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="sceneprev2" fitHeight="127.0" fitWidth="174.0" layoutX="10.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                              <ImageView fx:id="sceneprev3" fitHeight="115.0" fitWidth="178.0" layoutX="652.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                              <ImageView fx:id="sceneprev4" fitHeight="127.0" fitWidth="174.0" layoutX="1294.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+                              <ImageView fx:id="sceneprev5" fitHeight="127.0" fitWidth="174.0" layoutX="10.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ImageView fx:id="sceneprev6" fitHeight="127.0" fitWidth="179.0" layoutX="652.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                            </children>
                            <VBox.margin>
                               <Insets top="25.0" />
                            </VBox.margin>
                         </GridPane>
-                        <Button fx:id="saveStory1" layoutX="10.0" layoutY="279.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="803.0" style="-fx-background-color: #fff; -fx-background-radius: 30;" text="Save Storyboard To Image" textFill="#0069d4">
+                        <Button fx:id="saveStory1" layoutX="10.0" layoutY="279.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="591.0" style="-fx-background-color: #fff; -fx-background-radius: 30;" text="Save Storyboard To Image" textFill="#0069d4">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -315,7 +315,7 @@
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <HTMLEditor fx:id="textPane1" htmlText="&lt;html&gt;&#10;&lt;head&gt;&#10;&lt;style&gt;&#10;body{&#10;font-family:courier !important;&#10;}&#10;.scene{text-transform:uppercase; text-align:left ;}&#10;.action{text-align:left ;}&#10;.character{text-transform:uppercase ; text-align:center ;}&#10;.dialogue{text-align:center ;}&#10;.parenthesis{text-align:center ;}&#10;&lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body contenteditable=&quot;true&quot;&gt;&#10;&lt;/body&#10;&gt;&lt;/html&gt;" prefHeight="674.0" prefWidth="799.0" snapToPixel="false" />
+                  <HTMLEditor fx:id="textPane1" htmlText="&lt;html&gt;&#10;&lt;head&gt;&#10;&lt;style&gt;&#10;body{&#10;font-family:courier !important;&#10;}&#10;.scene{text-transform:uppercase; text-align:left ;}&#10;.action{text-align:left ;}&#10;.character{text-transform:uppercase ; text-align:center ;}&#10;.dialogue{text-align:center ;}&#10;.parenthesis{text-align:center ;}&#10;&lt;/style&gt;&#10;&lt;/head&gt;&#10;&lt;body contenteditable=&quot;true&quot;&gt;&#10;&lt;/body&#10;&gt;&lt;/html&gt;" prefHeight="666.0" prefWidth="731.0" snapToPixel="false" VBox.vgrow="NEVER" />
                   <HBox prefHeight="235.0" prefWidth="799.0">
                      <children>
                         <VBox prefHeight="235.0" prefWidth="263.0">
@@ -327,7 +327,7 @@
                               </Label>
                               <Pane fx:id="locoipane" prefHeight="131.0" prefWidth="210.0">
                                  <children>
-                                    <ImageView fx:id="locObjectImage" fitHeight="130.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="locObjectImage" fitHeight="130.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </Pane>
                               <Button fx:id="locObjectUpload" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="44.0" prefWidth="303.0" style="-fx-background-color: transparent;" text="Upload Image" textAlignment="CENTER" textFill="#0069d4">
@@ -349,7 +349,7 @@
                               </Label>
                               <Pane fx:id="skyoipane" prefHeight="148.0" prefWidth="231.0">
                                  <children>
-                                    <ImageView fx:id="ObjectImage" fitHeight="130.0" fitWidth="260.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="ObjectImage" fitHeight="130.0" fitWidth="242.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                                  <padding>
                                     <Insets left="10.0" right="10.0" />
@@ -375,7 +375,7 @@
                               </Label>
                               <Pane fx:id="charoipane" prefHeight="149.0" prefWidth="231.0">
                                  <children>
-                                    <ImageView fx:id="ObjectImage1" fitHeight="130.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ImageView fx:id="ObjectImage1" fitHeight="130.0" fitWidth="229.0" pickOnBounds="true" preserveRatio="true" />
                                  </children>
                               </Pane>
                               <Button fx:id="objectUpload1" mnemonicParsing="false" prefHeight="44.0" prefWidth="305.0" style="-fx-background-color: transparent; -fx-background-radius: 20;" text="Upload Image" textAlignment="CENTER" textFill="#0069d4">
