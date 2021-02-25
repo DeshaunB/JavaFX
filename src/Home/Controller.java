@@ -1082,6 +1082,7 @@ public class Controller implements Initializable {
 
             workingFile = selectedDirectory.getAbsolutePath();
             SetScenes();
+            sceneVector = ReadText.toSceneVec(bodytext, sceneVector);
             SkyImage.setImage(sceneVector.get(0).getBgImage());
             if(sceneVector.get(0).getLocation().getName().contains("EXT."))
                 LocationImage1.setImage(sceneVector.get(0).getLocation().getEXT());
